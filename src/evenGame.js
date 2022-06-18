@@ -10,7 +10,7 @@ export default () => {
 
   for (let i = 0; i < 3; i += 1) {
     const num = getRandomInt(20);
-    const answer = readlineSync.question(`Question: ${num} `);
+    const answer = readlineSync.question(`Question: ${num}\nYour answer: `);
     const even = num % 2 === 0 ? 'yes' : 'no';
     if (answer !== even) {
       console.log(`Let's try again, ${userName}!`);
