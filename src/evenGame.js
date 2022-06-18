@@ -12,12 +12,11 @@ export default () => {
     const num = getRandomInt(20);
     const answer = readlineSync.question(`Question: ${num} `);
     const even = num % 2 === 0 ? 'yes' : 'no';
-    if (answer === even) {
-      console.log('Correct!');
-    } else {
+    if (answer !== even) {
       console.log(`Let's try again, ${userName}!`);
       return;
     }
+    console.log('Correct!');
   }
 
   console.log(`Congratulations, ${userName}!`);
