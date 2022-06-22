@@ -1,5 +1,5 @@
 import greeting from './cli.js';
-import { roundsNumber } from './constants.js';
+import roundsNumber from './rounds-number.js';
 
 export default (taskOfGame, playGame) => {
   const userName = greeting();
