@@ -16,7 +16,7 @@ const isPrime = (num) => {
 };
 
 export const playGame = () => {
-  const num = getRandomInt(2, 3571);
+  const num = getRandomInt(2, 100);
   const userAnswer = readlineSync.question(`Question: ${num}\nYour answer: `);
   const correctAnswer = isPrime(num);
 
