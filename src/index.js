@@ -1,3 +1,4 @@
+import readlineSync from 'readline-sync';
 import greeting from './cli.js';
 
 export default (taskOfGame, playGame) => {
@@ -6,8 +7,16 @@ export default (taskOfGame, playGame) => {
   const roundsNumber = 3;
 
   for (let i = 0; i < roundsNumber; i += 1) {
-    if (!playGame()) {
+    const [question, correctAnswer] = playGame();
+    const userAnswer = readlineSync.question(question);
+
+    if (userAnswer !== correctAnswer) {
+      if (!['yes', 'no'].includes(correctAnswer)) {
+        console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+      }
+
       console.log(`Let's try again, ${userName}!`);
+
       return;
     }
 
