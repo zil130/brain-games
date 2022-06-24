@@ -1,4 +1,4 @@
-import getRandomInt from '../random-int.js';
+import getRandomInt from '../utils.js';
 
 export const taskOfGame = 'Answer "yes" if the number is even, otherwise answer "no".';
 
