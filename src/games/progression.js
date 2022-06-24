@@ -19,10 +19,12 @@ const getProgression = () => {
 
 export const playGame = () => {
   const progression = getProgression();
+  const question = [...progression];
   const searchElement = getRandomInt(0, progression.length - 1);
+  question[searchElement] = '..';
 
   return [
-    `Question: ${progression.slice(0, searchElement).join(' ')} .. ${progression.slice(searchElement + 1).join(' ')}\nYour answer: `,
+    `Question: ${question.join(' ')}\nYour answer: `,
     String(progression[searchElement]),
   ];
 };
