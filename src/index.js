@@ -1,9 +1,9 @@
 import greeting from './cli.js';
-import roundsNumber from './rounds-number.js';
 
 export default (taskOfGame, playGame) => {
   const userName = greeting();
   console.log(taskOfGame);
+  const roundsNumber = 3;
 
   for (let i = 0; i < roundsNumber; i += 1) {
     if (!playGame()) {
