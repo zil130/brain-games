@@ -1,4 +1,3 @@
-import readlineSync from 'readline-sync';
 import getRandomInt from '../random-int.js';
 
 export const taskOfGame = 'What is the result of the expression?';
@@ -29,13 +28,9 @@ export const playGame = () => {
     getRandomInt(0, 10),
     operators[getRandomInt(0, 2)],
   ];
-  const userAnswer = readlineSync.question(`Question: ${x} ${operator} ${y}\nYour answer: `);
-  const correctAnswer = getCorrectAnswer(x, y, operator);
 
-  if (userAnswer !== correctAnswer) {
-    console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-    return false;
-  }
-
-  return true;
+  return [
+    `Question: ${x} ${operator} ${y}\nYour answer: `,
+    getCorrectAnswer(x, y, operator),
+  ];
 };
