@@ -11,10 +11,7 @@ export default (taskOfGame, playGame) => {
     const userAnswer = readlineSync.question(`Question: ${question}\nYour answer: `);
 
     if (userAnswer !== correctAnswer) {
-      if (!['yes', 'no'].includes(correctAnswer)) {
-        console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-      }
-
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
       console.log(`Let's try again, ${userName}!`);
 
       return;
