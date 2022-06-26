@@ -28,9 +28,8 @@ export const playGame = () => {
     getRandomInt(0, 10),
     operators[getRandomInt(0, 2)],
   ];
+  const question = `${x} ${operator} ${y}`;
+  const answer = getCorrectAnswer(x, y, operator);
 
-  return [
-    `Question: ${x} ${operator} ${y}\nYour answer: `,
-    getCorrectAnswer(x, y, operator),
-  ];
+  return [question, answer];
 };

@@ -24,9 +24,8 @@ const getCorrectAnswer = (x, y) => {
 export const playGame = () => {
   const x = getRandomInt(2, 100);
   const y = getUniqueValue(x);
+  const question = `${x} ${y}`;
+  const answer = getCorrectAnswer(x, y);
 
-  return [
-    `Question: ${x} ${y}\nYour answer: `,
-    getCorrectAnswer(x, y),
-  ];
+  return [question, answer];
 };
