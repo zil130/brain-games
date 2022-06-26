@@ -16,9 +16,8 @@ const isPrime = (num) => {
 
 export const playGame = () => {
   const num = getRandomInt(2, 100);
+  const question = num;
+  const answer = isPrime(num);
 
-  return [
-    `Question: ${num}\nYour answer: `,
-    isPrime(num),
-  ];
+  return [question, answer];
 };

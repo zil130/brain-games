@@ -8,7 +8,7 @@ export default (taskOfGame, playGame) => {
 
   for (let i = 0; i < roundsNumber; i += 1) {
     const [question, correctAnswer] = playGame();
-    const userAnswer = readlineSync.question(question);
+    const userAnswer = readlineSync.question(`Question: ${question}\nYour answer: `);
 
     if (userAnswer !== correctAnswer) {
       if (!['yes', 'no'].includes(correctAnswer)) {
