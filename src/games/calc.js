@@ -3,31 +3,22 @@ import getRandomInt from '../utils.js';
 export const taskOfGame = 'What is the result of the expression?';
 
 const getCorrectAnswer = (x, y, operator) => {
-  let result;
-
-  switch (operator) {
-    case '+':
-      result = x + y;
-      break;
-    case '-':
-      result = x - y;
-      break;
-    case '*':
-      result = x * y;
-      break;
-    default:
+  if (operator === '+') {
+    return String(x + y);
   }
 
-  return String(result);
+  if (operator === '-') {
+    return String(x - y);
+  }
+
+  return String(x * y);
 };
 
 export const playGame = () => {
+  const x = getRandomInt(0, 10);
+  const y = getRandomInt(0, 10);
   const operators = ['+', '-', '*'];
-  const [x, y, operator] = [
-    getRandomInt(0, 10),
-    getRandomInt(0, 10),
-    operators[getRandomInt(0, 2)],
-  ];
+  const operator = operators[getRandomInt(0, 2)];
   const question = `${x} ${operator} ${y}`;
   const answer = getCorrectAnswer(x, y, operator);
 
