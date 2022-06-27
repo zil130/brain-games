@@ -1,4 +1,4 @@
-import getRandomInt from '../utils.js';
+import { getRandomInt, getRandomIndex } from '../utils.js';
 
 export const taskOfGame = 'What is the result of the expression?';
 
@@ -18,7 +18,7 @@ export const playGame = () => {
   const x = getRandomInt(0, 10);
   const y = getRandomInt(0, 10);
   const operators = ['+', '-', '*'];
-  const operator = operators[getRandomInt(0, 2)];
+  const operator = operators[getRandomIndex(operators)];
   const question = `${x} ${operator} ${y}`;
   const answer = getCorrectAnswer(x, y, operator);
 
