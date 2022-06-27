@@ -8,16 +8,18 @@ const getUniqueValue = (num) => {
   return (result !== num) ? result : getUniqueValue(num);
 };
 
-const isDivisor = (num, divisor) => num % divisor === 0; 
+const isDivisor = (num, divisor) => num % divisor === 0;
 
 const getCorrectAnswer = (x, y) => {
   const min = Math.min(x, y);
 
-  for (let i = min; i > 0; i -= 1) {
+  for (let i = min; i > 1; i -= 1) {
     if (isDivisor(x, i) && isDivisor(y, i)) {
       return String(i);
     }
   }
+
+  return '1';
 };
 
 export const playGame = () => {
