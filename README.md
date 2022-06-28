@@ -29,4 +29,4 @@ Node.js version 13 or higher
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/zil130/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/zil130/frontend-project-lvl1/actions)
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/857c067f767a4e86fd5b/maintainability)](https://codeclimate.com/github/zil130/frontend-project-lvl1/maintainability)
