@@ -1,6 +1,7 @@
+import runGame from '../index.js';
 import { getRandomInt, getRandomIndex } from '../utils.js';
 
-export const taskOfGame = 'What number is missing in the progression?';
+const taskOfGame = 'What number is missing in the progression?';
 const minNum = -20;
 const maxNum = 20;
 const minStep = 2;
@@ -25,7 +26,7 @@ const getQuestionProgression = (progression, index) => {
   return result.join(' ');
 };
 
-export const playGame = () => {
+const genRound = () => {
   const firstNum = getRandomInt(minNum, maxNum);
   const step = getRandomInt(minStep, maxStep);
   const len = getRandomInt(minLen, maxLen);
@@ -35,4 +36,8 @@ export const playGame = () => {
   const answer = String(progression[searchElement]);
 
   return [question, answer];
+};
+
+export default () => {
+  runGame(taskOfGame, genRound);
 };
