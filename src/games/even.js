@@ -3,12 +3,12 @@ import { getRandomInt } from '../utils.js';
 
 const taskOfGame = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const isEven = (num) => (num % 2 === 0 ? 'yes' : 'no');
+const isEven = (num) => num % 2 === 0;
 
 const genRound = () => {
   const num = getRandomInt(-20, 20);
   const question = num;
-  const answer = isEven(num);
+  const answer = isEven(num) ? 'yes' : 'no';
 
   return [question, answer];
 };
