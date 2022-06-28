@@ -1,6 +1,7 @@
+import runGame from '../index.js';
 import { getRandomInt } from '../utils.js';
 
-export const taskOfGame = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const taskOfGame = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (num) => {
   if (num <= 1) {
@@ -18,10 +19,14 @@ const isPrime = (num) => {
   return true;
 };
 
-export const playGame = () => {
+const genRound = () => {
   const num = getRandomInt(-20, 100);
   const question = num;
   const answer = isPrime(num) ? 'yes' : 'no';
 
   return [question, answer];
+};
+
+export default () => {
+  runGame(taskOfGame, genRound);
 };

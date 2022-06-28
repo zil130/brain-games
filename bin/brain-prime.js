@@ -1,6 +1,4 @@
 #!/usr/bin/env node
+import playPrimeGame from '../src/games/prime.js';
 
-import start from '../src/index.js';
-import { taskOfGame, playGame } from '../src/games/prime.js';
-
-start(taskOfGame, playGame);
+playPrimeGame();
