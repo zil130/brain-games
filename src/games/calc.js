@@ -2,6 +2,8 @@ import runGame from '../index.js';
 import { getRandomInt, getRandomIndex } from '../utils.js';
 
 const taskOfGame = 'What is the result of the expression?';
+const minNum = 0;
+const maxNum = 10;
 
 const getAnswer = (x, y, operator) => {
   if (operator === '+') {
@@ -16,8 +18,8 @@ const getAnswer = (x, y, operator) => {
 };
 
 const genRound = () => {
-  const x = getRandomInt(0, 10);
-  const y = getRandomInt(0, 10);
+  const x = getRandomInt(minNum, maxNum);
+  const y = getRandomInt(minNum, maxNum);
   const operators = ['+', '-', '*'];
   const operator = operators[getRandomIndex(operators)];
   const question = `${x} ${operator} ${y}`;

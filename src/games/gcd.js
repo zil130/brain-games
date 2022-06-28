@@ -2,9 +2,11 @@ import runGame from '../index.js';
 import { getRandomInt } from '../utils.js';
 
 const taskOfGame = 'Find the greatest common divisor of given numbers.';
+const minNum = 2;
+const maxNum = 50;
 
 const getUniqueValue = (num) => {
-  const result = getRandomInt(2, 50);
+  const result = getRandomInt(minNum, maxNum);
 
   return (result !== num) ? result : getUniqueValue(num);
 };
@@ -24,7 +26,7 @@ const getAnswer = (x, y) => {
 };
 
 const genRound = () => {
-  const x = getRandomInt(2, 50);
+  const x = getRandomInt(minNum, maxNum);
   const y = getUniqueValue(x);
   const question = `${x} ${y}`;
   const answer = getAnswer(x, y);
