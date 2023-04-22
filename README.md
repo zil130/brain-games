@@ -1,5 +1,10 @@
 # Brain games
+
+[![Actions Status](https://github.com/zil130/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/zil130/frontend-project-lvl1/actions) [![Maintainability](https://api.codeclimate.com/v1/badges/857c067f767a4e86fd5b/maintainability)](https://codeclimate.com/github/zil130/frontend-project-lvl1/maintainability)
+
 Set of five console mini-games
+
+Note: the names of the games are the commands to run them
 
 1. brain-even [demo](https://asciinema.org/a/TZ6PsYeKoXTzp27zYQOkzwgMt)
 2. brain-calc [demo](https://asciinema.org/a/5E9VckF4AnZfNys80SC6r4nAi)
@@ -7,26 +12,11 @@ Set of five console mini-games
 4. brain-progression [demo](https://asciinema.org/a/NV4rv9MfwG14jwLizDfWJZHWu)
 5. brain-prime [demo](https://asciinema.org/a/gHBNsaKzMGvRmVXKq1ujJwFPp)
 
-The names of the games listed below are the commands to run them
-
----
-
-## Minimum requirements
-Node.js version 13 or higher
-
 ---
 
 ## Install
 1. Install [Node.js](https://nodejs.org)
-2. Fork this repository: https://github.com/zil130/frontend-project-lvl1
-3. Clone your newly created repo: https://github.com/<%your_github_username%>/frontend-project-lvl1
-4. Go to folder `frontend-project-lvl1`
+2. Clone this repository: https://github.com/zil130/brain-games
+4. Go to folder `brain-games`
 5. Run `npm install`
 6. Run `npm link`
-
----
-
-### Hexlet tests and linter status:
-[![Actions Status](https://github.com/zil130/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/zil130/frontend-project-lvl1/actions)
-
-[![Maintainability](https://api.codeclimate.com/v1/badges/857c067f767a4e86fd5b/maintainability)](https://codeclimate.com/github/zil130/frontend-project-lvl1/maintainability)
